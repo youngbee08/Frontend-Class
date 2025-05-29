@@ -25,7 +25,9 @@ const Signup = () => {
             if(data.status === "success"){
             toast.success(data.message)
             navigate("/signin")
-        }
+           }else{
+            toast.error(data.message)
+           }
         } catch (error) {
             console.log(error)
         } finally {
